@@ -6,7 +6,7 @@ pipeline {
         //     steps{
         //         git branch: 'master', url: "https://github.com/vi-malii/iaac", credentialsId: '6da50594-1f2d-4106-ba2d-446370c6fd99'
         //         }
-            }
+        //  }
         stage('Deploy') { 
             steps { 
                 sh 'ansible-playbook ansible/playbook.yml -i ansible/host.ini'
