@@ -2,6 +2,11 @@ pipeline {
     agent any
    
     stages { 
+        stage('Checkout') {
+            steps{
+                git branch: 'master', url: "https://github.com/vi-malii/iaac/tree/master/ansible"
+                }
+            }
         stage('Deploy') { 
             steps { 
                 sh 'ansible-playbook playbook.yml -i hosts.ini'
