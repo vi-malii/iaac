@@ -4,7 +4,7 @@ pipeline {
     stages { 
         stage('Checkout') {
             steps{
-                git branch: 'master', url: "https://github.com/vi-malii/iaac/ansible", credentialsId: '6da50594-1f2d-4106-ba2d-446370c6fd99'
+                git branch: 'master', url: "https://github.com/vi-malii/iaac/tree/master/ansible", credentialsId: '6da50594-1f2d-4106-ba2d-446370c6fd99'
                 }
             }
         stage('Deploy') { 
